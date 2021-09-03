@@ -1,0 +1,38 @@
+name: merchant-service
+log:
+  level: debug
+  format: json
+server:
+  port: 9030
+  key:
+  cert:
+  ssl: false
+database:
+  driver: postgresql
+  endpoint: localhost
+  port: 5432
+  name: merchant
+  username: oauth2
+  password: some-secret
+  auto-migrate: true
+  ssl: false
+account-database:
+  driver: mysql
+  endpoint: 192.168.173.220
+  port: 3306
+  name: reportserver
+  username: admin
+  password: U2zxdwFflI9CaWay9C
+  auto-migrate: true
+  ssl: false
+oauth2:
+  endpoint: http://localhost:9000
+  name: merchant
+  username: tmds-merchant
+  password: some-secret
+  redirect-uri: http://localhost:3000/callback/success
+  scope: public_profile
+  ssl-verify: false
+billpay:
+  endpoint:
+  apikey:
